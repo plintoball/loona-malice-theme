@@ -36,8 +36,8 @@
 	--members-width: 250px;
 	--background-shading: 100%;
 	--background-overlay: rgba(255, 0, 0, 0);
-	--background-image: url(https://cdn.discordapp.com/attachments/1340831335668912138/1341102084065333348/B6dKZ7F.png?ex=67b4c625&is=67b374a5&hm=33dd28048c2229dc5b7ccb62107af7db6ba00c2e5f365916504e13e38f92b94f&);
-	--settings-image: url(https://cdn.discordapp.com/attachments/1340831335668912138/1341108599711076432/IIrmsd7.png?ex=67b4cc36&is=67b37ab6&hm=224e1949fd528019fef6de02538de2693e20eb4872423de7a71474a633f57b74&);
+	--background-image: url(https://raw.githubusercontent.com/plintoball/loona-malice-theme/refs/heads/main/images/main-bg.png);
+	--settings-image: url(https://github.com/plintoball/loona-malice-theme/blob/main/images/settings_bg.png?raw=true);
 	--background-position: center;
 	--background-size: cover;
 	--background-repeat: no-repeat;
@@ -87,7 +87,7 @@
 	--user-modal-grayscale: var(--background-grayscale);
 	--user-modal-sepia: var(--background-sepia);
 	--user-modal-blur: calc(var(--background-blur) + 3px);
-	--home-icon: url(https://cdn.discordapp.com/attachments/1340831335668912138/1340848565144256574/8gsOUCW.png?ex=67b3da09&is=67b28889&hm=84b41a402bfe9bb51bdefa6b7660f5eecae17017518b36d861b1f3fe5ff12f8d&);
+	--home-icon: url(https://raw.githubusercontent.com/plintoball/loona-malice-theme/refs/heads/main/images/home_icon.png);
 	--home-position: center;
 	--home-size: 50px;
 	--popout-color: rgb(31, 31, 43);
