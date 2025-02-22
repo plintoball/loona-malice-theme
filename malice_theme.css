@@ -1,6 +1,19 @@
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/ThemeDevBadge.css);
 
 :root {
+	--color-one: #090912;
+	--color-two: #11111d;
+	--color-three: #181826;
+	--color-four: #242432;
+	--color-five: #2e2e3e;
+
+	--icon-color: #dadada;
+	--icon-selected: #ffffff;
+
+	--text-normal: #ffffff;
+	--text-muted: #b1b1b3;
+	--text-dark: #6e6f79; 
+
 	--settingswidth: 1570;
 	--settingsheight: 91;
 	--settingsbackground: transparent;
@@ -14,13 +27,13 @@
 	--hover-color: #a11b1b;
 	--success-color: #43b581;
 	--danger-color: #982929;
-	--channel-color: rgba(255, 255, 255, 0.685);
-	--channel-hovered: rgba(255, 255, 255, 0.7);
-	--channel-unread: #ffffff;
-	--channel-selected: #fff;
-	--channel-muted: rgba(255, 255, 255, 0.1);
-	--server-unread: var(--main-color);
-	--url-color: var(--main-color);
+	--channel-color: var(--text-muted);
+	--channel-hovered: var(--text-normal);
+	--channel-unread: var(--text-normal);
+	--channel-selected: var(--text-normal);
+	--channel-muted: var(--text-normal);
+	--server-unread: var(--icon-color);
+	--url-color: #16a1f1;
 	--focus-color: var(--main-color);
 	--online-color: #43b581;
 	--idle-color: #faa61a;
@@ -30,12 +43,10 @@
 	--main-font: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif;
 	--code-font: Consolas, Liberation Mono, Menlo, Courier, monospace;
 	--font-display: var(--main-font);
-	--text-normal: rgb(220, 221, 222);
-	--text-muted: rgb(114, 118, 125);
 	--channels-width: 250px;
 	--members-width: 250px;
 	--background-shading: 100%;
-	--background-overlay: rgba(255, 0, 0, 0);
+	--background-overlay: var(--color-one);
 	--background-image: url(https://raw.githubusercontent.com/plintoball/loona-malice-theme/refs/heads/main/images/main-bg.png);
 	--settings-image: url(https://github.com/plintoball/loona-malice-theme/blob/main/images/settings_bg.png?raw=true);
 	--background-position: center;
@@ -49,7 +60,7 @@
 	--background-grayscale: 0%;
 	--background-sepia: 0%;
 	--background-blur: 0px;
-	--backdrop-overlay: rgba(0, 0, 0, 0.8);
+	--backdrop-overlay: rgba(0, 0, 0, 0);
 	--backdrop-image: var(--background-image);
 	--backdrop-position: var(--background-position);
 	--backdrop-size: var(--background-size);
@@ -74,7 +85,7 @@
 	--user-popout-grayscale: var(--background-grayscale);
 	--user-popout-sepia: var(--background-sepia);
 	--user-popout-blur: calc(var(--background-blur) + 0px);
-	--user-popout-overlay: rgba(29, 31, 39, 0.9);
+	--user-popout-overlay: var(--color-three);
 	--user-modal-image: var(--background-image);
 	--user-modal-position: var(--background-position);
 	--user-modal-size: var(--background-size);
@@ -89,22 +100,41 @@
 	--user-modal-blur: calc(var(--background-blur) + 3px);
 	--home-icon: url(https://raw.githubusercontent.com/plintoball/loona-malice-theme/refs/heads/main/images/home_icon.png);
 	--home-position: center;
-	--home-size: 50px;
+	--home-size: 60px;
 	--popout-color: rgb(31, 31, 43);
-	--modal-color: rgba(0, 0, 0, 0.5);
-	--card-color: rgba(0, 0, 0, 0.4);
+	--modal-color: var(--color-four);
+	--card-color: var(--color-four);
 	--bd-blue: var(--main-color);
 	--bd-blue-hover: var(--hover-color);
 	--bd-blue-active: var(--hover-color);
 	--font-primary: var(--main-font);
 	--font-code: var(--code-font);
 
-	--channel-menu-color: rgba(49, 50, 68, 0.4);
-	--members-menu-color: rgba(49, 50, 68, 0.4);
+	--channel-menu-color: var(--color-three);
+	--members-menu-color: var(--color-three);
 	--text-background-color: rgba(0, 0, 0, 0.5);
-	--top-bar-color: rgba(31, 31, 43, 0.2);
-	--guilds-color: rgba(31, 31, 43, 0.2);
-	--search-background-color: rgba(97, 98, 112, 0.4);
+	--top-bar-color: var(--color-two);
+	--guilds-color: var(--color-two);
+	--search-background-color: var(--color-four);
+}
+
+.header_f37cb1 {
+    position: relative;
+    font-family: var(--font-display);
+    font-weight: 500;
+    padding: 10.5px 16px;
+    box-sizing: border-box;
+    z-index: 3;
+    transition: background-color .1s linear;
+    box-shadow: var(--shadow-ledge);
+}
+
+.listItem__650eb {
+    position: relative;
+    margin: 0 0 6px;
+    display: flex;
+    justify-content: center;
+    width: var(--custom-guild-list-width);
 }
 
 #app-mount .baseLayer__960e4 {
@@ -138,7 +168,7 @@
 	bottom: 0 !important;
 	left: 0 !important;
 	background: var(--settings-image) var(--background-position)/var(--background-size) var(--background-repeat) var(--background-attachment) !important;
-	border-radius: 5px !important;
+	border-radius: 15px !important;
 	box-shadow: var(--elevation-high) !important;
 	width: var(--settingswidth_v) !important;
 	height: var(--settingsheight_v) !important;
@@ -165,7 +195,7 @@
 }
 #app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b {
 	width: 218px !important;
-	padding: 20px 6px 20px 20px !important;
+	padding: 30px 6px 20px 20px !important;
 }
 #app-mount .layer__960e4 ~ .layer__960e4 .contentColumnDefault__23e6b,
 #app-mount .layer__960e4 ~ .layer__960e4 .contentColumnWide__23e6b {
@@ -1122,7 +1152,7 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 	width: 18px;
 	height: 18px;
 	margin-right: 3px;
-	color: var(--channel-color);
+	color: var(--icon-color);
 	transition: all .15s ease-in-out
 }
 
@@ -1137,7 +1167,7 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 }
 
 .actionIcon_c69b6d {
-	color: var(--channel-color);
+	color: var(--icon-color);
 	transition: all .15s ease-in-out
 }
 
@@ -1385,10 +1415,9 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--main-color);
+	color: var(--icon-selected);
 	font-weight: 700;
 	transition: all .3s ease-in-out;
-	opacity: .7
 }
 
 .name__29444:before {
@@ -1396,7 +1425,7 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 	height: 2px;
 	flex-grow: 1;
 	transition: all .3s ease-in-out;
-	background: linear-gradient(to left, var(--main-color) 50%, transparent);
+	background: linear-gradient(to left, var(--icon-selected) 50%, transparent);
 	margin-right: 5px
 }
 
@@ -1405,7 +1434,7 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 	height: 2px;
 	flex-grow: 1;
 	transition: all .3s ease-in-out;
-	background: linear-gradient(to right, var(--main-color) 50%, transparent);
+	background: linear-gradient(to right, var(--icon-selected) 50%, transparent);
 	margin-left: 5px
 }
 
@@ -1439,7 +1468,7 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 }
 
 .addButtonIcon__29444 {
-	color: var(--main-color);
+	color: rgb(255, 255, 255);
 	opacity: .7;
 	transition: all .3s ease-in-out
 }
@@ -1880,9 +1909,7 @@ html:not(.visual-refresh) .sidebar_c48ade:not(.hidden_c48ade) {
 }
 
 .chatContent_f75fb0,
-.resizeHandle__01ae2 {
-	background: var(--text-background-color);
-}
+.resizeHandle__01ae2,
 
 .chat_f75fb0 .content_f75fb0 {
 	background: rgba(0, 0, 0, 0)
@@ -2340,13 +2367,9 @@ div[aria-checked=true] .mentionButton__841c8 {
 	transition: all .15s ease-in-out
 }
 
-.channelTextArea__74017:focus-within {
-	box-shadow: 0 0 2px 2px var(--main-color)
-}
-
 .scrollableContainer__74017 {
-	background: rgba(0, 0, 0, 0);
-	border: 2px solid rgba(0, 0, 0, 0)
+	background: var(--color-three);
+	border: 2px solid var(--color-three)
 }
 
 .attachButton__0923f {
@@ -3231,7 +3254,7 @@ textarea::-webkit-scrollbar {
 
 .wrapper__6e9f8:hover .childWrapper__6e9f8,
 .wrapper__6e9f8.selected__6e9f8 .childWrapper__6e9f8 {
-	background-color: var(--main-color);
+	background-color: var(--color-one);
 	color: #fff
 }
 
@@ -3358,7 +3381,7 @@ textarea::-webkit-scrollbar {
 }
 
 .container__9293f .children__9293f .icon__9293f {
-	color: var(--main-color);
+	color: var(--icon-color);
 	filter: drop-shadow(0 0 3px);
 	width: 22px
 }
@@ -3519,9 +3542,9 @@ textarea::-webkit-scrollbar {
 }
 
 .toolbar__9293f .iconWrapper__9293f>svg:not(.icon__9293f) {
-	color: var(--main-color);
-	filter: drop-shadow(0 0 5px);
-	transition: filter .3s ease-in-out
+    color: #fff;
+    opacity: .5;
+    transition: all .15s ease-in-out;
 }
 
 .toolbar__9293f .iconWrapper__9293f:hover>svg:not(.icon__9293f) {
@@ -3938,7 +3961,7 @@ textarea::-webkit-scrollbar {
 	padding-top: 20px;
 	display: flex;
 	align-items: center;
-	color: var(--main-color);
+	color: var(--icon-color);
 	font-size: 11px;
 	font-weight: 700;
 	transition: all .15s ease-in-out;
@@ -6204,7 +6227,8 @@ code {
 .theme-dark .root__49fc1 {
 	background: var(--modal-color);
 	box-shadow: none;
-	backdrop-filter: blur(1.5px)
+	backdrop-filter: blur(1.5px);
+	border-radius: 15px
 }
 
 .theme-dark .modal__487be .footer__49fc1,
@@ -6460,7 +6484,7 @@ code {
 }
 
 .container_eb2cd2 {
-	background-color: var(--main-color)
+	background-color: var(--color-four)
 }
 
 .container_eb2cd2:hover {
@@ -7601,7 +7625,7 @@ html:not(.visual-refresh) .input__991a0 {
 }
 
 .button_e6e74f {
-	background-color: var(--popout-color);
+	background-color: var(--color-three);
 	border-radius: 8px;
 	height: 48px;
 	width: 48px
@@ -10306,7 +10330,7 @@ html:not(.visual-refresh-chat-input) .inner_a99829 {
 }
 
 .sidebar__23e6b .side_b3f026 {
-	padding: 30px 0
+	padding: 0px 0
 }
 
 .header_b3f026 {
